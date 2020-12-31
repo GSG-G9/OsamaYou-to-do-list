@@ -5,7 +5,6 @@ const UserLists = ({ toDoLists, onListClick }) => {
     <nav className="menu">
       {Object.keys(toDoLists).map((item, i) => (
         <a
-          href="!#"
           className={`menuItem ${+(i === 0) ? " menuItem--active" : ""}`}
           id={item}
           key={i}
