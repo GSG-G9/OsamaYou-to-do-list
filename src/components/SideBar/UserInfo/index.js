@@ -8,7 +8,7 @@ const UserInfo = ({ userName, onAddList }) => (
       name="task"
       placeholder="Insert your list here.."
       onKeyDown={onAddList}
-      autocomplete="off"
+      autoComplete="off"
     />
   </div>
 );

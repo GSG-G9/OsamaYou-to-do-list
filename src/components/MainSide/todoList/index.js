@@ -9,7 +9,7 @@ const TodoList = ({ tasks, onRemoveTask, onAddTask, onCompleteTask }) => {
           name="task"
           placeholder="Insert your task here..."
           onKeyDown={onAddTask}
-          autocomplete="off"
+          autoComplete="off"
         />
       </section>
       <section className="app-list">
