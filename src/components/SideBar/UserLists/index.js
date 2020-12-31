@@ -1,14 +1,21 @@
-import './UserLists.css';
+import "./UserLists.css";
 
-const UserLists = () => (
-  <nav className="menu">
-    <a href="!#" className="menuItem">
-      <span>not active</span>
-    </a>
-    <a href="!#" className="menuItem menuItem--active">
-      <span>active</span>
-    </a>
-  </nav>
-);
+const UserLists = ({ toDoLists, onListClick }) => {
+  return (
+    <nav className="menu">
+      {Object.keys(toDoLists).map((item, i) => (
+        <a
+          href="!#"
+          className={`menuItem ${+(i === 0) ? " menuItem--active" : ""}`}
+          id={item}
+          key={i}
+          onClick={onListClick}
+        >
+          <span>{toDoLists[item].name}</span>
+        </a>
+      ))}
+    </nav>
+  );
+};
 
 export default UserLists;
