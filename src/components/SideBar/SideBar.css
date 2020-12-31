@@ -6,17 +6,7 @@
   grid-template-areas:
     "logo"
     "avatar"
-    "menu"
-    "logOut";
+    "menu";
   grid-template-columns: 1fr;
   grid-template-rows: 50px auto 1fr 50px;
 }
-
-.logOut {
-  font-size: 0.7rem;
-  font-weight: 400;
-  text-align: center;
-  grid-area: logOut;
-  cursor: pointer;
-}
-
