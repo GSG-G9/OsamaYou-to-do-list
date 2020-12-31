@@ -7,7 +7,6 @@ const SideBar = ({ data: { userName, toDoLists }, onAddList, onListClick }) => (
   <div id="sideBar">
     <UserInfo userName={userName} onAddList={onAddList} />
     <UserLists toDoLists={toDoLists} onListClick={onListClick} />
-    <div className="logOut">logOut</div>
   </div>
 );
 
