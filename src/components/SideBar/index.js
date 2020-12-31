@@ -1,14 +1,14 @@
-import UserInfo from './UserInfo';
-import UserLists from './UserLists';
+import UserInfo from "./UserInfo";
+import UserLists from "./UserLists";
 
-import './SideBar.css';
+import "./SideBar.css";
 
-const SideBar = () => (
-  <sidebar>
-    <UserInfo />
-    <UserLists />
+const SideBar = ({ data: { userName, toDoLists }, onAddList, onListClick }) => (
+  <div id="sideBar">
+    <UserInfo userName={userName} onAddList={onAddList} />
+    <UserLists toDoLists={toDoLists} onListClick={onListClick} />
     <div className="logOut">logOut</div>
-  </sidebar>
+  </div>
 );
 
 export default SideBar;
