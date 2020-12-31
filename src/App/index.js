@@ -13,9 +13,6 @@ export default class App extends Component {
         //   name: "shopping",
         //   tasks: [
         //     { value: "sds1", isCompleat: false },
-        //     { value: "sds2", isCompleat: true },
-        //     { value: "sds3", isCompleat: false },
-        //     { value: "sds4", isCompleat: false },
         //   ],
         // },
         // 1: { name: "shopping", tasks: [{ value: "sds", isCompleat: false }] },
@@ -58,18 +55,21 @@ export default class App extends Component {
 
   onListClick = (e) => {
     const el = e.target;
-    // set as select
+
+    if (!el.classList.contains("menuItem")) {
+      return;
+    }
+
     el.parentNode.childNodes.forEach((e) => {
       e.setAttribute("class", "menuItem");
     });
     el.classList.toggle("menuItem--active");
-
+    
     // get the id
     const listId = el.id;
 
     //set currentListId on new id
     this.setState({ currentListId: listId });
-    console.log("you are in " + listId);
   };
 
   // ToDo List handler listener
@@ -80,8 +80,6 @@ export default class App extends Component {
       1
     );
     this.setState((preState) => {
-      console.log({ task });
-
       return { data: preState.data };
     });
   };
@@ -105,7 +103,6 @@ export default class App extends Component {
           };
         },
         () => {
-          console.log(this.state.data);
           e.target.value = "";
         }
       );
