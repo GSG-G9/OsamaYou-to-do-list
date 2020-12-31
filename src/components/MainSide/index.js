@@ -1,4 +1,4 @@
-import TodoList from "./TodoList";
+import TodoList from "./todoList";
 
 import "./MainSide.css";
 
