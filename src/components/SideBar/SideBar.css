@@ -1,4 +1,4 @@
-sidebar {
+#sideBar {
   grid-area: sidebar;
   display: grid;
   background-color: white;
