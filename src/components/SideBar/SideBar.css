@@ -1,0 +1,22 @@
+sidebar {
+  grid-area: sidebar;
+  display: grid;
+  background-color: white;
+  box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
+  grid-template-areas:
+    "logo"
+    "avatar"
+    "menu"
+    "logOut";
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto 1fr 50px;
+}
+
+.logOut {
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-align: center;
+  grid-area: logOut;
+  cursor: pointer;
+}
+
