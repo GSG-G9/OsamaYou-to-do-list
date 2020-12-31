@@ -22,7 +22,7 @@ const TodoList = ({ tasks, onRemoveTask, onAddTask, onCompleteTask }) => {
               onClick={onCompleteTask}
             >
               {item.value}
-              <a href="!#" className="remove-task" onClick={onRemoveTask}>
+              <a className="remove-task" onClick={onRemoveTask}>
                 remove
               </a>
             </li>
