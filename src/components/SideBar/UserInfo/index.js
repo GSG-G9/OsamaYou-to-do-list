@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import "./UserInfo.css";
 
 const UserInfo = ({ userName, onAddList }) => (
